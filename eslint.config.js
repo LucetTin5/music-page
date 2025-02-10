@@ -33,7 +33,7 @@ export default tseslint.config(
       'import/order': [
         'error',
         {
-          'newlines-between': 'never',
+          'newlines-between': 'always',
           alphabetize: {
             order: 'asc',
             caseInsensitive: true,
