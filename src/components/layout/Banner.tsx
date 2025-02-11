@@ -54,8 +54,14 @@ const banners: BannerType[] = [
 export const Banner = () => {
   return (
     <div className="w-full">
-      <Carousel className="w-full py-4">
-        <CarouselContent className="p-2 flex gap-2 ml-0">
+      <Carousel
+        className="w-full py-4"
+        opts={{
+          loop: true,
+          align: 'start',
+        }}
+      >
+        <CarouselContent className="p-2 flex gap-2 ml-2">
           {banners.map((banner) => (
             <CarouselItem
               key={banner.id}
