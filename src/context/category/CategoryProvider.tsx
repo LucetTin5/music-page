@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 
-import { CATEGORY } from '@/constants/category';
+import { Category, CATEGORY } from '@/constants/category';
 import { CategoryContext } from '@/context/category/CategoryContext';
 
 export const CategoryProvider = ({
@@ -8,20 +8,25 @@ export const CategoryProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [currentCategory, setCurrentCategory] = useState<
-    (typeof CATEGORY)[number]['value']
-  >(CATEGORY[0].value);
+  const [currentCategory, setCurrentCategory] = useState<Category>(CATEGORY[0]);
 
   const changeCategory = useCallback(
     (category: (typeof CATEGORY)[number]['value']) => {
-      setCurrentCategory(category);
+      setCurrentCategory(
+        CATEGORY.find((c) => c.value === category) as Category,
+      );
     },
     [],
   );
 
   return (
     <CategoryContext.Provider
-      value={{ currentCategory, categories: CATEGORY, changeCategory }}
+      value={{
+        currentCategory: currentCategory.value,
+        currentCategoryContentTitle: currentCategory.contentTitle,
+        categories: CATEGORY,
+        changeCategory,
+      }}
     >
       {children}
     </CategoryContext.Provider>
