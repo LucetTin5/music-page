@@ -6,7 +6,7 @@ export const Contents = () => {
   return (
     <div className="flex flex-col gap-4 bg-gray-200 px-4 pt-4 pb-16">
       <h3 className="text-md font-bold">{currentCategoryContentTitle}</h3>
-      {/* TODO: category component-mapping */}
+      {/* TODO: category component-mapping (or router outlet) */}
       {currentCategory === 'chart' && <ChartList />}
     </div>
   );

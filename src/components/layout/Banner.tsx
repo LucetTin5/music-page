@@ -91,6 +91,7 @@ export const Banner = () => {
                     </a>
                   )}
                 </div>
+                {/* TODO: Timezone 필요 시 수정 필요 */}
                 {banner.startDateTime && banner.endDateTime && (
                   <div className="flex justify-end items-center px-1">
                     <p className="text-xs">
