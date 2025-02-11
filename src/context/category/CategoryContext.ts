@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-import { CATEGORY } from '@/constants/category';
+import { CATEGORY } from '@/mock/category';
 
 interface CategoryContextType {
   currentCategory: (typeof CATEGORY)[number]['value'];
