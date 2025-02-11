@@ -1,6 +1,7 @@
 import {
   Carousel,
   CarouselContent,
+  CarouselIndicator,
   CarouselItem,
 } from '@/components/ui/carousel';
 import { BannerType } from '@/types/banner';
@@ -103,6 +104,7 @@ export const Banner = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <CarouselIndicator mainColor="bg-pink-400" subColor="bg-gray-300" />
       </Carousel>
     </div>
   );
