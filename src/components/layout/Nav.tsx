@@ -55,16 +55,13 @@ export const Nav = () => {
         style={{ transform: `translateX(${translateX}px)` }}
       >
         {categories.map((category) => (
-          <li
-            key={category.value}
-            className={`h-full px-4 py-2 flex items-center justify-center hover:bg-primary-foreground ${
-              currentCategory === category.value
-                ? 'text-white hover:text-[#aaa]'
-                : 'text-black'
-            }`}
-          >
+          <li key={category.value} className="h-full">
             <button
-              className="w-full font-semibold text-sm"
+              className={`w-full h-full px-4 py-2 font-semibold text-sm hover:bg-primary-foreground ${
+                currentCategory === category.value
+                  ? 'text-white hover:text-[#aaa]'
+                  : 'text-black'
+              }`}
               onClick={() => changeCategory(category.value)}
             >
               {category.label}
