@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 
-import { Category, CATEGORY } from '@/mock/category';
 import { CategoryContext } from '@/context/category/CategoryContext';
+import { Category, CATEGORY } from '@/mock/category';
 
 export const CategoryProvider = ({
   children,
